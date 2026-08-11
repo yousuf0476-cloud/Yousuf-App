@@ -4,6 +4,8 @@ const PORT = process.env.PORT || 8080;
 
 // تحديد مكان ملفات الواجهات EJS
 app.set('view engine', 'ejs');
+const path = require('path');
+app.set('views', path.join(__dirname, '../views'));
 
 // الـ Route الأساسي للفرونت إند
 app.get('/', (async (req, res) => {
